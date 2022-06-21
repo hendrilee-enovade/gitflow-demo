@@ -22,7 +22,7 @@ jobs:
       - name: Send HTTP POST REST Request
         uses: Enovade/POST-REST@v1.0.3
         with:
-          url: 'http://202.165.24.140:1337/jpns?jenis=pengumuman'
+          url: 'http://202.165.24.140:1337/jpns?jenis=berita'
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
