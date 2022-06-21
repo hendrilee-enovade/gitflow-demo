@@ -20,7 +20,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Send HTTP POST REST Request
-        uses: Enovade/POST-REST@v1.0.3
+        uses: Enovade/POST-REST@v1.0.4
         with:
           url: 'http://202.165.24.140:1337/jpns?jenis=berita'
 
