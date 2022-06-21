@@ -26,7 +26,7 @@ jobs:
           
       # Runs a single command using the runners shell
       - name: Save result to file
-        run: echo "Salam Sejahtera!!" >> greet.txt
+        run: echo ${{ steps.build.outputs.result }} >> greet.txt
         
       - name: Upload artifact
         uses: actions/upload-artifact@v3
