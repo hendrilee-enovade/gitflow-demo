@@ -24,10 +24,6 @@ jobs:
         uses: Enovade/POST-REST@v1.0.5
         with:
           url: 'http://202.165.24.140:1337/moes?jenis=berita'
-      # Runs a single command using the runners shell
-      - name: Save result to file 
-        run: echo "hello world!!" >> greet.txt
-      #  run: echo ${{ steps.postid.outputs.result }}
   
   artifact:
     # The type of runner that the job will run on
@@ -35,8 +31,8 @@ jobs:
     needs: build
     steps:
       # Runs a single command using the runners shell
-      #- name: Save result to file 
-      #  run: echo "hello world" >> greet.txt
+      - name: Save result to file 
+        run: echo "hello world" >> greet.txt
       #  run: echo ${{ steps.postid.outputs.result }}
         
       - name: Upload artifact
@@ -47,4 +43,4 @@ jobs:
     
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Salam Sejahtera!
+        run: echo "result- ${{needs.build.outputs.result}}"
