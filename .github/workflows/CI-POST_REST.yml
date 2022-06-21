@@ -25,6 +25,9 @@ jobs:
         uses: Enovade/POST-REST@v1.0.5
         with:
           url: 'http://202.165.24.140:1337/moes?jenis=berita'
+          
+      - name: display result 2 
+        run: echo ${{ steps.postid.outputs.build }}
   
   artifact:
     # The type of runner that the job will run on
