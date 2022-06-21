@@ -24,7 +24,7 @@ jobs:
         with:
           splaskurl: 'https://splaskprototaip.cloud-connect.asia/app/getsplask'
           url: 'https://www.mampu.gov.my/'
-          scope: 'splwpkcontact'
+          scope: 'all'
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
