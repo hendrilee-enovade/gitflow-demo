@@ -26,8 +26,13 @@ jobs:
           
       # Runs a single command using the runners shell
       - name: Save result to file
-        run: echo "------------------" >> mydate.txt
+        run: echo "Salam Sejahtera!!" >> greet.txt
         
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          path: greet.txt
+    
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Salam Sejahtera!
