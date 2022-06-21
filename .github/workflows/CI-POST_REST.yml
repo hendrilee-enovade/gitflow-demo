@@ -22,7 +22,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Send HTTP POST REST Request
         id: postid
-        uses: Enovade/POST-REST@v1.0.7
+        uses: Enovade/POST-REST@v1.0.8
         with:
           url: 'http://202.165.24.140:1337/moes?jenis=berita'
           
