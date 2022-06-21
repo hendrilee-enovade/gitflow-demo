@@ -31,7 +31,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          path: greets.txt
+          path: greet.txt
           if-no-files-found: error
     
       # Runs a single command using the runners shell
