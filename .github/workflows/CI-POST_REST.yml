@@ -19,7 +19,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: Enovade/POST-REST@v1.0.2
+      - name: Send HTTP POST REST Request
+        uses: Enovade/POST-REST@v1.0.3
+        with:
+          url: 'http://202.165.24.140:1337/jpns?jenis=pengumuman'
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
