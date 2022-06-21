@@ -16,18 +16,18 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     outputs:
-      result-json: ${{ steps.postid.outputs.build }}
+      result-json: ${{ steps.postid.outputs.jawapan }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Send HTTP POST REST Request
         id: postid
-        uses: Enovade/POST-REST@v1.0.5
+        uses: Enovade/POST-REST@v1.0.6
         with:
           url: 'http://202.165.24.140:1337/moes?jenis=berita'
           
       - name: display result 2 
-        run: echo ${{ steps.postid.outputs.build }}
+        run: echo ${{ steps.postid.outputs.jawapan }}
   
   artifact:
     # The type of runner that the job will run on
