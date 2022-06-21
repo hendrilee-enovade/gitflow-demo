@@ -22,12 +22,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Send HTTP POST REST Request
         id: postid
-        uses: Enovade/POST-REST@v1.0.8
+        uses: Enovade/POST-REST@v1.0.9
         with:
           url: 'http://202.165.24.140:1337/moes?jenis=berita'
           
       - name: Save result to file 
-        run: cat ${{(steps.postid.outputs.jawapan)}} > jawapan.json
+        run: echo ${{(steps.postid.outputs.jawapan)}} > jawapan.json
         
       - name: Upload artifact
         uses: actions/upload-artifact@v3
