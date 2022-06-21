@@ -1,4 +1,4 @@
-name: CI-POST-REST
+name: CI-SPLaSK-assessment
 
 # Controls when the workflow will run
 on:
