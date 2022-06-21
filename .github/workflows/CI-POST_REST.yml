@@ -24,11 +24,15 @@ jobs:
         uses: Enovade/POST-REST@v1.0.5
         with:
           url: 'http://202.165.24.140:1337/moes?jenis=berita'
-          
+  
+  artifact:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
       # Runs a single command using the runners shell
       - name: Save result to file 
-        run: echo ${{ steps.postid.outputs.result }}
-     #   run: echo ${{ steps.build.outputs.result }} >> greet.txt
+        run: echo "hello world" >> greet.txt
+      #  run: echo ${{ steps.postid.outputs.result }}
         
       - name: Upload artifact
         uses: actions/upload-artifact@v3
