@@ -27,7 +27,7 @@ jobs:
           url: 'http://202.165.24.140:1337/moes?jenis=berita'
           
       - name: Save result to file 
-        run: ${{fromJson(steps.postid.outputs.jawapan)}} > jawapan.json
+        run: echo "${{(steps.postid.outputs.jawapan)}}" > jawapan.json
         
       - name: Upload artifact
         uses: actions/upload-artifact@v3
