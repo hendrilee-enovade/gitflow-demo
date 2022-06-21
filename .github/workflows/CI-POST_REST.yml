@@ -26,8 +26,17 @@ jobs:
         with:
           url: 'http://202.165.24.140:1337/moes?jenis=berita'
           
-      - name: display result 2 
-        run: echo ${{ steps.postid.outputs.jawapan }}
+      - name: Save result to file 
+        run: ${{ steps.postid.outputs.jawapan }} >> jawapan.json
+        
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          path: jawapan.json
+          if-no-files-found: error
+          
+      #- name: display result 2 
+      #  run: echo ${{ steps.postid.outputs.jawapan }}
   
   artifact:
     # The type of runner that the job will run on
@@ -44,6 +53,3 @@ jobs:
           path: greet.txt
           if-no-files-found: error
     
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo "result- ${{ needs.build.outputs.result-json }}"
