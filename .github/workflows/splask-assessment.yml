@@ -11,7 +11,15 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  initialize:
+    runs-on: ubuntu-latest
+    steps:
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        id: Initialize-step
+        with: 
+          access-token: ${{secrets.ENOVADE_TOKEN}}
+        
   scan-website:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
