@@ -22,8 +22,8 @@ jobs:
         id: scan-step
         uses: Enovade/splask@v1.0.1
         with:
-          splaskurl: 'https://splaskprototaip.cloud-connect.asia/app/getsplask'
-          url: 'https://www.mampu.gov.my/'
+          splaskurl: ${{secrets.ENOVADE_TOKEN}}
+          url: 'https://www.jpa.gov.my/'
           scope: 'all'
           
       - name: Save result to file 
