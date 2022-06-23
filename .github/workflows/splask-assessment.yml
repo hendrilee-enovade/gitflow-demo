@@ -29,7 +29,7 @@ jobs:
         uses: Enovade/splask@v1.0.1
         with:
           splaskurl: ${{secrets.ENOVADE_TOKEN}}
-          url: 'https://www.mampu.gov.my'
+          url: 'https://www.mof.gov.my/'
           scope: 'all'
           
       - name: Save result to file 
