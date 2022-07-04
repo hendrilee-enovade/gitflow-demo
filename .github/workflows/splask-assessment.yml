@@ -35,10 +35,15 @@ jobs:
       - name: Save result to file 
         run: echo ${{toJson(steps.scan-step.outputs.jawapan)}} > jawapan.json
         
+      - name: JSON-to-HTML
+        uses: Enovade/json2html@v0.1.1
+        with:
+          json: jawapan.json
+        
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          path: jawapan.json
+          path: htmloutput.html
           if-no-files-found: error
           
   artifact:
