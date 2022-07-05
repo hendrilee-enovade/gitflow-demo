@@ -43,11 +43,11 @@ jobs:
       
       - name: Save result to html 
         run: |
-          echo '\'' >> htmloutput.html 
+          echo '"' >> htmloutput.html
           cat htmloutput.html 
           echo ${steps.scan-step.json-html.htmloutput} >> htmloutput.html 
           cat htmloutput.html 
-          echo '\'' >> htmloutput.html
+          echo '"' >> htmloutput.html
         
       - name: Upload artifact
         uses: actions/upload-artifact@v3
