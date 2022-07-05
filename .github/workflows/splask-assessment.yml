@@ -38,7 +38,7 @@ jobs:
       - name: JSON-to-HTML
         uses: Enovade/json2html@v0.2.0
         with:
-          json: jawapan.json
+          json: ${{toJson(steps.scan-step.outputs.jawapan)}}
         
       - name: Upload artifact
         uses: actions/upload-artifact@v3
