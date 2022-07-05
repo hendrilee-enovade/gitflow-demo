@@ -43,7 +43,7 @@ jobs:
       
       - name: Save result to html 
         run: |
-          echo '"' >> htmloutput.html
+          echo ' -e "' >> htmloutput.html
           cat htmloutput.html 
           echo ${{steps.json-html.outputs.htmloutput}} >> htmloutput.html 
           cat htmloutput.html 
