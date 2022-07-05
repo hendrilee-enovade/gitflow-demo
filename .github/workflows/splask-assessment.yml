@@ -37,7 +37,7 @@ jobs:
         
       - name: JSON-to-HTML
         id: json-html
-        uses: Enovade/json2html@v0.2.1
+        uses: Enovade/json2html@v0.2.3
         with:
           json: ${{steps.scan-step.outputs.jawapan}}
       
