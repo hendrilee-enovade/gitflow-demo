@@ -36,9 +36,13 @@ jobs:
         run: echo ${{toJson(steps.scan-step.outputs.jawapan)}} > jawapan.json
         
       - name: JSON-to-HTML
+        id: json-html
         uses: Enovade/json2html@v0.2.1
         with:
           json: ${{steps.scan-step.outputs.jawapan}}
+      
+      - name: Save result to html 
+        run: echo ${{steps.json-html.outputs.htmloutput}} > htmloutput.html
         
       - name: Upload artifact
         uses: actions/upload-artifact@v3
