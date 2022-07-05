@@ -36,7 +36,7 @@ jobs:
         run: echo ${{toJson(steps.scan-step.outputs.jawapan)}} > jawapan.json
         
       - name: JSON-to-HTML
-        uses: Enovade/json2html@v0.2.0
+        uses: Enovade/json2html@v0.2.1
         with:
           json: ${{steps.scan-step.outputs.jawapan}}
         
