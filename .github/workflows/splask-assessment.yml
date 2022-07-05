@@ -45,7 +45,7 @@ jobs:
         run: |
           echo '"' >> htmloutput.html
           cat htmloutput.html 
-          echo ${{steps.scan-step.json-html.htmloutput}} >> htmloutput.html 
+          echo ${{steps.json-html.htmloutput}} >> htmloutput.html 
           cat htmloutput.html 
           echo '"' >> htmloutput.html
         
