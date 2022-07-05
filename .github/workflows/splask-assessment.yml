@@ -42,7 +42,12 @@ jobs:
           json: ${{steps.scan-step.outputs.jawapan}}
       
       - name: Save result to html 
-        run: echo -e ${{steps.json-html.outputs.htmloutput}} > htmloutput.html
+        run: |
+          echo "\"" >> htmloutput.html 
+          cat htmloutput.html 
+          echo ${steps.scan-step.json-html.htmloutput} >> htmloutput.html 
+          cat htmloutput.html 
+          echo "\"" >> htmloutput.html
         
       - name: Upload artifact
         uses: actions/upload-artifact@v3
